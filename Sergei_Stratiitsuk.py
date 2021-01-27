@@ -1,57 +1,56 @@
-def ss(f):
-    fail=open(f,"r" , ss"ut-8-si")
-    for line in file :
-        abc.append(line.trige)
-        file.close
-        return abc
-
-rus:list=gang("rus.txt")
-
-def pool(f):
-    file.open(f"r",en"")
-    abc=[]
-    for line in file:
-        aeg.append(line.strip)
-        file.close
-        return aeg
-    rus_list=loe.failist("rus.txt")
-    ang_list=loe.failist("ang.txt")
-    print(rus_list)
-    print(ang_list)
-    while True:
-
-
-
-
 def loe_failist(f):
     fail=open(f,'r',encoding="utf-8-sig")
-    mas=[] 
+    mas=[]
     for rida in fail:
         mas.append(rida.strip())
     fail.close()
     return mas
 
-
-def salvesta_failisse(f, text):
-    fail=open(f,"a", encoding="utf-8-sig")
-    fail.write(text+"\n")
+def salvesta_failisse(f,text):
+    fail=open(f,"a",encoding="utf-8-sig")
+    fail.write+(text+"\n")
     fail.close()
     mas=[]
     mas=loe_failist(f)
-def tõlkimine():
-    pass
-rus_list=loe_failist("rus.txt")
-ang_list=loe_failist("ang.txt")
-print(rus_list)
-print(ang_list)
-while True:
-    v=input("перевод-1, новое слово-2, исправлять ошибки-3, проверка знаний-4")
-    if v=="1":
-        tõlkimine()
-    elif v=="2":
-        rus_sõna=input("введи слово на русском")
-        ang_sõna=input("введи слово на английском")
-        rus_list=salvesta_failisse("rus.txt",rus_sõna)
-        print(rus_list)
-        print(ang_list)
+    return mas
 
+def tolkimine(rus,eng):
+    slovo=input("Введи слово=>")
+    if slovo in rus:
+        ind=rus.index(slovo)
+        print(f"{slovo}-{eng[ind]}")
+    elif slovo in eng:
+        ind2=eng.index(slovo)
+        print(f"{slovo}-{eng[ind]}")
+
+def parandus():
+    viga=input("Какое слово хотите исправить?")
+    if viga in rus:
+        ind=rus.index(viga)
+        print(f"Будет исправлена пара слов{viga}-{en_list[ind]}")
+        rus.pop(ind)
+        eng.pop(ind)
+        new_words()
+    elif viga in eng:
+        ind=eng
+        print(f"Будет исправлена пара слов{viga}-{rus_list[ind]}")
+        rus.pop(ind)
+        eng.pop(ind)
+        new_words()
+    else:
+        print(f"{viga.upper()} отсутствует в словаре")
+        return ru_list,en_list
+
+rus=loe_failist("rus.txt")
+eng=loe_failist("eng.txt")
+print(rus)
+print(eng)
+    
+while True:
+    g=input("1 перевод, 2 Новое слово, 3 испровление ошибок, 4 Проверка знаний")
+    if g=="1":
+        tolkimine(rus,eng)
+    elif g=="2":
+        rus_sona=input("введи слово на руском=>")
+        eng_sona=("write words on English:")
+        rus_salvista_failisse("rus.txt",rus_sona)

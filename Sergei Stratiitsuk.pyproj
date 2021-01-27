@@ -23,6 +23,10 @@
   <ItemGroup>
     <Compile Include="Sergei_Stratiitsuk.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="eng.txt" />
+    <Content Include="rus.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
